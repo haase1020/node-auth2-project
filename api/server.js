@@ -12,8 +12,8 @@ server.use(helmet());
 server.use(express.json());
 server.use(cors());
 
-server.use('/api/auth', authRouter);
-server.use('/api/users', restricted, checkRole('user'), usersRouter);
+// server.use('/api/auth', authRouter);
+// server.use('/api/users', restricted, checkRole('user'), usersRouter);
 
 server.get('/', (req,res) => {
     res.send("I am working HARD!!");
@@ -29,7 +29,7 @@ function checkRole(role) {
             ){
                 next();
             } else {
-                res.status(403.json({ you shall not pass! }))
+                res.status(403).json({ you: "shall not pass!" })
             }
     }
 }
