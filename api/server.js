@@ -12,8 +12,8 @@ server.use(helmet());
 server.use(express.json());
 server.use(cors());
 
-// server.use('/api/auth', authRouter);
-// server.use('/api/users', restricted, checkRole('user'), usersRouter);
+server.use('/api/auth', authRouter);
+server.use('/api/users', restricted, checkDepartment('user'), usersRouter);
 
 server.get('/', (req,res) => {
     res.send("I am working HARD!!");
@@ -21,11 +21,11 @@ server.get('/', (req,res) => {
 
 module.exports = server;
 
-function checkRole(role) {
+function checkDepartment(department) {
     return (req,res,next) => {
-        if(rec.decodedToken &&
-            req.decodedToken.role &&
-            req.decodedToken.role.toLowerCase()===role
+        if(req.decodedToken &&
+            req.decodedToken.department &&
+            req.decodedToken.department.toLowerCase()===department
             ){
                 next();
             } else {
