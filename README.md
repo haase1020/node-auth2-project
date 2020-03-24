@@ -17,7 +17,7 @@ In this project we'll implement a full authentication workflow (register/login/l
 - **CD into the folder** where you cloned the repository. done
 - Do your magic! done!
 
-## Assignment
+## Assignment March 24, 2020
 
 Use Node.js, Express and Knex to build an API that provides _Authentication_ functionality using SQLite to store _User_ information.
 
