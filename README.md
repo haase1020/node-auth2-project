@@ -17,7 +17,7 @@ In this project we'll implement a full authentication workflow (register/login/l
 - **CD into the folder** where you cloned the repository. done
 - Do your magic! done!
 
-## Assignment
+## Assignment March 24, 2020
 
 Use Node.js, Express and Knex to build an API that provides _Authentication_ functionality using SQLite to store _User_ information.
 
@@ -33,7 +33,7 @@ Use **JSON Web Tokens** to keep users authenticated across requests.
 | POST   | /api/login    | Use the credentials sent inside the `body` to authenticate the user. On successful login, create a new JWT with the user id as the subject and send it back to the client. If login fails, respond with the correct status code and the message: 'You shall not pass!' |
 | GET    | /api/users    | If the user is logged in, respond with an array of all the users contained in the database. If the user is not logged in respond with the correct status code and the message: 'You shall not pass!'.                                                                  |
 
-## Stretch Problem
+## Stretch Problem March 24, 2020
 
 - add the code necessary so that when a client makes a `GET` request to `/api/users` the server only returns documents with the `same department` as the logged in user. For example if the logged in user belongs to the finance department, then only users with the _finance_ department should be returned; if the logged in user is in _sales_ only users on the sales department should be returned.
 - implement a React client:
